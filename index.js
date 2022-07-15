@@ -1,0 +1,20 @@
+const express = require('express')
+const app = express()
+const mongoose = require('mongoose')
+require('dotenv').config()
+const connectDB = require('./config/db')
+const homeRoutes = require('./routes/home')
+
+
+
+connectDB()
+
+app.use(express.json())
+app.use(express.urlencoded({extended:true}))
+
+// routes
+app.use('/',homeRoutes)
+
+app.listen(process.env.PORT, () => {
+    console.log(`server running on Port ${process.env.PORT}`)
+})
