@@ -4,11 +4,13 @@ const mongoose = require('mongoose')
 require('dotenv').config()
 const connectDB = require('./config/db')
 const homeRoutes = require('./routes/home')
+const cors = require('cors')
 
 
 
 connectDB()
 
+app.use(cors())
 app.use(express.json())
 app.use(express.urlencoded({extended:true}))
 

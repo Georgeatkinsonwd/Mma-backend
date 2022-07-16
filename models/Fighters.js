@@ -19,7 +19,7 @@ const FighterSchema = new mongoose.Schema({
         required: true,
     },
     weightClass: {
-        type: Number,
+        type: String,
         required: true,
     },
     reach : {

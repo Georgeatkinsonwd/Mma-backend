@@ -10,5 +10,13 @@ module.exports = {
                 res.json(result)
             }
         })
+    },
+    createFighter: async (req,res)=>{
+        const fighter = req.body
+        const newFighter = new FighterModel(fighter)
+        // .save is a function from mongoose
+        await newFighter.save()
+
+        res.json(fighter)
     }
 }
