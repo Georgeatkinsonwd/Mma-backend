@@ -6,6 +6,18 @@ const FighterSchema = new mongoose.Schema({
         type: String,
         required: true
     },
+    nickname: {
+        type:String,
+        required: false,
+    },
+    nationality: {
+        type: String,
+        required: true,
+    },
+    rank: {
+        type:Number,
+        required: true,
+    },
     record: {
         type: String,
         required: true,
@@ -22,11 +34,7 @@ const FighterSchema = new mongoose.Schema({
         type: String,
         required: true,
     },
-    reach : {
-        type: String,
-        required: true,
-    },
-    filmImg: {
+    imgSrc: {
         type: String,
         required: false,
     }
