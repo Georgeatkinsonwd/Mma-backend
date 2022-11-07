@@ -30,7 +30,7 @@ module.exports = {
         res.json(fighter)
     },
 
-    increaseRank: async (req,res)=>{
+    changeRank: async (req,res)=>{
         const fighter = await FighterModel.findByIdAndUpdate({_id:req.params.id},req.body)
         
         try {

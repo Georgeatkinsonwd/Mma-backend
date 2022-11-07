@@ -10,7 +10,7 @@ router.get('/getFighter/:id',homeController.getFighter)
 
 router.post('/createFighter', homeController.createFighter)
 
-router.put('/increaseRank/:id', homeController.increaseRank)
+router.put('/changeRank/:id', homeController.changeRank)
 
 module.exports = router
 
